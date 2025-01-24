@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{b6b6ecd8-c226-47cb-a3e4-dab4b0e21b35}">
+		<property name="assetPath">
+			<value>loopableBG.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>13.584</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{1c9b8d32-7d77-418f-8cf5-6436e04565c3}</destination>
+		</relationship>
+	</object>
+</objects>

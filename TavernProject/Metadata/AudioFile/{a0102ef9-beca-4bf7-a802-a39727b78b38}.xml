@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{a0102ef9-beca-4bf7-a802-a39727b78b38}">
+		<property name="assetPath">
+			<value>Bars &amp; Restaurants - Glasses - Stacking Glasses Multiple 01.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>10</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{1c9b8d32-7d77-418f-8cf5-6436e04565c3}</destination>
+		</relationship>
+	</object>
+</objects>

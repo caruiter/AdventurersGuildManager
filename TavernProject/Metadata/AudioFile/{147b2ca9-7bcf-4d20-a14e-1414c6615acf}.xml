@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{147b2ca9-7bcf-4d20-a14e-1414c6615acf}">
+		<property name="assetPath">
+			<value>AMBRoom_School Classroom - Room Tone - SCR01, School Classroom, Summer Vacation, Quiet, Empty, Lights Off, Afternoon_WWA_QSRT_Neumann KM184_ORTF.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>246.09375</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{1c9b8d32-7d77-418f-8cf5-6436e04565c3}</destination>
+		</relationship>
+	</object>
+</objects>

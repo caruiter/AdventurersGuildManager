@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{c55012c4-4bc0-4a0f-99c8-ac555f26d154}">
+		<property name="assetPath">
+			<value>LADDER Metal Small Rattle.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>5.226</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{1c9b8d32-7d77-418f-8cf5-6436e04565c3}</destination>
+		</relationship>
+	</object>
+</objects>

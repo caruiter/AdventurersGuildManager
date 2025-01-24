@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{600b737f-3c9f-4503-8099-ee1eea868fdd}">
+		<property name="assetPath">
+			<value>326313__ivolipa__tavern_ambience_inside_laughter.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>37.485714285714288</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{1c9b8d32-7d77-418f-8cf5-6436e04565c3}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,0 +1,121 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7222888915060347507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/BankA.strings.bank
+  m_EditorClassIdentifier: 
+  Path: TavernProject/Build/Desktop/BankA.strings.bank
+  Name: BankA.strings
+  StudioPath: bank:/BankA.strings
+  lastModified: 638732590843473831
+  FileSizes:
+  - Name: Desktop
+    Value: 810
+  Exists: 1
+--- !u!114 &-5537283476741052495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/BankA.bank
+  m_EditorClassIdentifier: 
+  Path: TavernProject/Build/Desktop/BankA.bank
+  Name: BankA
+  StudioPath: bank:/BankA
+  lastModified: 638732590843461019
+  FileSizes:
+  - Name: Desktop
+    Value: 7853280
+  Exists: 1
+--- !u!114 &-4603638979579357249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/GuildHallBG
+  m_EditorClassIdentifier: 
+  Path: event:/GuildHallBG
+  Guid:
+    Data1: 2137061560
+    Data2: 1326544025
+    Data3: -1404963191
+    Data4: -622673776
+  Banks:
+  - {fileID: -5537283476741052495}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 181354
+--- !u!114 &-2338978518857627287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/TavernBG
+  m_EditorClassIdentifier: 
+  Path: event:/TavernBG
+  Guid:
+    Data1: 1333386185
+    Data2: 1085845516
+    Data3: 1270754690
+    Data4: 1203235786
+  Banks:
+  - {fileID: -5537283476741052495}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 73314
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: -7222888915060347507}
+  - {fileID: -5537283476741052495}
+  EditorEvents:
+  - {fileID: -4603638979579357249}
+  - {fileID: -2338978518857627287}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: -5537283476741052495}
+  StringsBanks:
+  - {fileID: -7222888915060347507}
+  cacheTime: 638732590843473831
+  cacheVersion: 131603

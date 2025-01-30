@@ -197,11 +197,13 @@ public class MenuManager : MonoBehaviour
     //calls next week
     public void CallNextWeek()
     {
+
+        weekEndAnim.Play("NextWeekAnim");
+
         info.weeks++;
         UpdateWeek();
 
         letter.CheckMessages();
-        weekEndAnim.Play("NextWeekAnim");
 
         //restore adventurer endurance
         if (info.adventurersOnStandby.Count > 0)
@@ -232,8 +234,8 @@ public class MenuManager : MonoBehaviour
             Debug.Log("tax - " + info.weeks);
             UpdateGold();
         }
-
-        CheckNextQuest();
+        
+        //CheckNextQuest();
         //OpenNewQuestScreen();
     }
 

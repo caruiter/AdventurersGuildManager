@@ -227,13 +227,16 @@ public class QuestAssigningTesting : MonoBehaviour
     public void RemoveAdventurer(int which)
     {
         //check for null
-        if (currentQuest.adventurersAssigned[which] != null)
-        {
-            info.adventurersOnStandby.Add(currentQuest.adventurersAssigned[which]);
-            currentQuest.adventurersAssigned.Remove(currentQuest.adventurersAssigned[which]);
-            currentQuest.CalculateProbability();
-            UpdateDisplay();
+        if(currentQuest.adventurersAssigned.Count!=0){
+            if (currentQuest.adventurersAssigned[which] != null)
+            {
+                info.adventurersOnStandby.Add(currentQuest.adventurersAssigned[which]);
+                currentQuest.adventurersAssigned.Remove(currentQuest.adventurersAssigned[which]);
+                currentQuest.CalculateProbability();
+                UpdateDisplay();
+            }
         }
+
 
     }
 

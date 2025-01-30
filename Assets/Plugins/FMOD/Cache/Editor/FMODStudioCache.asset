@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: TavernProject/Build/Desktop/BankA.strings.bank
   Name: BankA.strings
   StudioPath: bank:/BankA.strings
-  lastModified: 638186567796032940
+  lastModified: 638733166433336686
   FileSizes:
   - Name: Desktop
     Value: 810
@@ -35,7 +35,7 @@ MonoBehaviour:
   Path: TavernProject/Build/Desktop/BankA.bank
   Name: BankA
   StudioPath: bank:/BankA
-  lastModified: 638186567796020716
+  lastModified: 638733166433242008
   FileSizes:
   - Name: Desktop
     Value: 7853280
@@ -117,5 +117,5 @@ MonoBehaviour:
   - {fileID: -5537283476741052495}
   StringsBanks:
   - {fileID: -7222888915060347507}
-  cacheTime: 638186567796032940
+  cacheTime: 638733166433336686
   cacheVersion: 131603

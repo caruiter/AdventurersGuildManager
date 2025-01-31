@@ -100,6 +100,7 @@ public class ModifiedQuestScreen : MonoBehaviour
             {
                 int c = Random.Range(0, info.genericQuestPool.Count);
                 fromPool.Add(info.genericQuestPool[c]);
+                //adding from generic pool
                 if (info.genericQuestPool[c].adventurersAssigned.Count > 0)
                 {
                     foreach(AdventurerScript a in info.genericQuestPool[c].adventurersAssigned)
@@ -156,7 +157,7 @@ public class ModifiedQuestScreen : MonoBehaviour
 
         Debug.Log("second");
         //scrub current pool
-        for (int f = 0; f <= fromPool.Count; f++)
+        for (int f = 0; f <= fromPool.Count-1; f++)
         {
             fromPool.Remove(fromPool[f]);
             Debug.Log("third");

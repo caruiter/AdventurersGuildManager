@@ -218,6 +218,13 @@ public class MenuManager : MonoBehaviour
         }
 
 
+        //CheckTax()
+        
+        //CheckNextQuest();
+        //OpenNewQuestScreen();
+    }
+
+    public void CheckTax(){
         //every month
         if(info.weeks%4 == 0)
         {
@@ -234,9 +241,6 @@ public class MenuManager : MonoBehaviour
             Debug.Log("tax - " + info.weeks);
             UpdateGold();
         }
-        
-        //CheckNextQuest();
-        //OpenNewQuestScreen();
     }
 
     //updates gold shown

@@ -19,5 +19,6 @@ public class SuppWeekEndFade : MonoBehaviour
 
     public void WeekFadeDone(){
         menem.CheckNextQuest();
+        menem.CheckTax();
     }
 }

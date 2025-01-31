@@ -11,14 +11,14 @@ public class HoverText : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     public void OnPointerEnter(PointerEventData pointerEventData)
     {
         InfoText.SetActive(true);
-        Debug.Log("Cursor Entering " + name + " GameObject");
+        //Debug.Log("Cursor Entering " + name + " GameObject");
     }
 
     //Detect when Cursor leaves the GameObject
     public void OnPointerExit(PointerEventData pointerEventData)
     {
         InfoText.SetActive(false);
-        Debug.Log("Cursor Exiting " + name + " GameObject");
+        //Debug.Log("Cursor Exiting " + name + " GameObject");
     }
 
     public void OnDisable()

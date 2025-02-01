@@ -52,14 +52,19 @@ public class QuestScript : MonoBehaviour
     //calculate probability based on adventurer's endurance
     public void CalculateProbability()
     {
-        int probAdjust = 0;
+        if(adventurersAssigned.Count != 0){
+            int probAdjust = 0;
 
-        foreach(AdventurerScript adv in adventurersAssigned)
-        {
-            int end = adv.currentEndurance;
-            probAdjust += end;
+            foreach(AdventurerScript adv in adventurersAssigned)
+            {
+                int end = adv.currentEndurance;
+                probAdjust += end;
+            }
+            int check = baseProbability;
+            currentProbability = check + (probAdjust * 5);
+        }else{
+        currentProbability = 0;
         }
-        int check = baseProbability;
-        currentProbability = check + (probAdjust * 5);
-    }
+        
+    } 
 }

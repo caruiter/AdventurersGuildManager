@@ -55,9 +55,25 @@ public class QuestAssigningTesting : MonoBehaviour
         questDescDisplay.text = currentQuest.blurb;   
         questObjDisplay.text = currentQuest.objective;
 
-        questReqsDisplay.text = "Endurance Cost: " + currentQuest.enduranceCost;
+        bool endok = true;
+        foreach(AdventurerScript adv in currentQuest.adventurersAssigned){
+            if(adv.currentEndurance < currentQuest.enduranceCost){
+                endok = false;
+            }
+        }
+        if(endok){
+            questReqsDisplay.text = "Endurance Cost: " + currentQuest.enduranceCost;
+        } else{
+            questReqsDisplay.text = "Endurance Cost: <color=red>" + currentQuest.enduranceCost + "</color>";
+        }
+
         questReqsDisplay.text += "\nBase Probability: " + currentQuest.baseProbability;
-        questReqsDisplay.text += "\nCalculated Probability: " + currentQuest.currentProbability;
+        if(currentQuest.currentProbability>=80){
+            questReqsDisplay.text += "\nCalculated Probability: " + "<color=#005500>"+currentQuest.currentProbability + "</color>";
+        } else{
+            questReqsDisplay.text += "\nCalculated Probability: " + "<color=red>"+currentQuest.currentProbability+ "</color>";
+        }
+        
         //questReqsDisplay.text += "\nBonus Stat: " + currentQuest.bonusStat;
 
         questRewardsDisplay.text = "Expected Rewards: " + currentQuest.gold + " gold, ";
@@ -133,7 +149,11 @@ public class QuestAssigningTesting : MonoBehaviour
                 //show details
                 assignedAdventurerNames[g].text = currentQuest.adventurersAssigned[g].aName;
 
-                assignedAdventurerStats[g].text = "Endurance: " + currentQuest.adventurersAssigned[g].currentEndurance;
+                if(currentQuest.adventurersAssigned[g].currentEndurance<currentQuest.enduranceCost){
+                    assignedAdventurerStats[g].text = "<color=#ff8088>Endurance: " + currentQuest.adventurersAssigned[g].currentEndurance + "</color>";
+                } else{
+                    assignedAdventurerStats[g].text = "Endurance: " + currentQuest.adventurersAssigned[g].currentEndurance;
+                }
 
                 /**
                 assignedAdventurerStats[g].text = "atk: " + currentQuest.adventurersAssigned[g].atk;

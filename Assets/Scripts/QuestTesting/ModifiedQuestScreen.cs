@@ -168,6 +168,8 @@ public class ModifiedQuestScreen : MonoBehaviour
             Debug.Log("fourth");
         }
 
+        menu.gameObject.GetComponent<AudioManager>().playPageTurn();
+
         newQuestsAdded++;
         CheckQuestDraw();
         //menu.OpenMainScreen();

@@ -79,7 +79,7 @@ public class ShopScript : MonoBehaviour
                 ItemDescription.text = "A decent iron helmet that gives a sense of security. Equippable, increases max Endurance by 2.";
                 ItemCostDisplay.text = "Costs 15 gold";
                 itemCost = 15;
-                currentItemDisplayed = "iron helmet";
+                currentItemDisplayed = "helmet";
                 consumable = false;
                 break;
             case 5:

@@ -194,7 +194,7 @@ public class InventoryManager : MonoBehaviour
         if (info.equipableItems.Contains(what)) //check that player has item
         {
             //check that adventurer has room
-            if (currentAdventurer.equipment.Count < 3)
+            if (currentAdventurer.equipment.Count < 3 && !currentAdventurer.equipment.Contains(what))
             {
                 //move to adventurer's script and revise stats
                 currentAdventurer.equipment.Add(what);

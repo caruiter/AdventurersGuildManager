@@ -2121,20 +2121,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sounds:
-
-    "GDC Game Audio Bundle"
-
-    https://gdc.sonniss.com/
-
-
-
-    Dialogue
-    system:
-
-    "Dialogue System for Unity"
-
-    https://assetstore.unity.com/packages/tools/ai/dialogue-system-for-unity-11672'
+  m_text: "Sounds:\n\"GDC Game Audio Bundle\"\nhttps://gdc.sonniss.com/\n\nMisc.
+    from Pixabay\n    https://pixabay.com/sound-effects/pen-strokes-and-scribbling-compilation-25322/\nhttps://pixabay.com/sound-effects/pen-click1-47501/
+    https://pixabay.com/sound-effects/writing-on-paper-263222/\nhttps://pixabay.com/sound-effects/tada-fanfare-a-6313/\nhttps://pixabay.com/sound-effects/cymbals-roll-28327/\nhttps://pixabay.com/sound-effects/2-notes-octave-guitar-83275/\nhttps://pixabay.com/sound-effects/paper-245786/\n\nDialogue
+    system:\n\"Dialogue System for Unity\"\nhttps://assetstore.unity.com/packages/tools/ai/dialogue-system-for-unity-11672"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3ca88ed89becff4993a62bf355f86af, type: 2}
   m_sharedMaterial: {fileID: -6935728560574537083, guid: e3ca88ed89becff4993a62bf355f86af, type: 2}
@@ -2161,8 +2151,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35
-  m_fontSizeBase: 35
+  m_fontSize: 32
+  m_fontSizeBase: 32
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

@@ -29,7 +29,7 @@ public class AudioManager : MonoBehaviour
 
     public void playPageTurn(){
         au.PlayOneShot(pageTurn);
-        Debug.Log("PLAYYY");
+        //Debug.Log("PLAYYY");
     }
     public void playFanfare(){
         au.PlayOneShot(fanfare);

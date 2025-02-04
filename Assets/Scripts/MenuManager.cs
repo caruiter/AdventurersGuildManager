@@ -388,20 +388,21 @@ public class MenuManager : MonoBehaviour
             }
             
 
+            if(passed){
+                foreach (AdventurerScript adv in testing.adventurersAssigned)
+                {
+                    //give adventurers exp
+                    adv.exp += ex;
+                    adv.CheckLevelUp();
 
-            foreach (AdventurerScript adv in testing.adventurersAssigned)
-            {
-                //give adventurers exp
-                adv.exp += ex;
-                adv.CheckLevelUp();
+                    //subtract endurance cost
+                    adv.currentEndurance -= en;
 
-                //subtract endurance cost
-                adv.currentEndurance -= en;
-
-                //return adventurers to standby
-                info.adventurersOnStandby.Add(adv);
-                //testing.adventurersAssigned.Remove(adv);
-            }
+                    //return adventurers to standby
+                     info.adventurersOnStandby.Add(adv);
+                    /testing.adventurersAssigned.Remove(adv);
+                }
+            } 
         }
 
             
@@ -500,6 +501,7 @@ public class MenuManager : MonoBehaviour
     //shows that an adventurer has levelled up
     public void ShowLevelUp(GameObject adventurer)
     {
+        GetComponent<AudioManager>().playCymbals();
         AdventurerScript adv = adventurer.GetComponent<AdventurerScript>();
         advLevelUpScreen.SetActive(true);
         advLevelInfo.text = adv.name + " has levelled up!\nLevel: " + adv.level;
@@ -508,6 +510,7 @@ public class MenuManager : MonoBehaviour
     //shows that the guild has ranked up
     public void ShowRankUp()
     {
+        GetComponent<AudioManager>().playFanfare();
         guildRankUpScreen.SetActive(true);
         guildRankInfo.text = info.guildName + " has proven their mettle!\nGuild Rank: "+ info.guildRank;
     }
@@ -536,6 +539,7 @@ public class MenuManager : MonoBehaviour
     //show injured adventurer
     public void ShowInjury()
     {
+        GetComponent<AudioManager>().playGuitar();
         injuryScreen.SetActive(true);
         injuryInfo.text = injuryNotification[0].aName + " has been injured!";
     }

@@ -223,6 +223,7 @@ public class QuestAssigningTesting : MonoBehaviour
             }
         }
         currentQuest = info.activeQuests[index];
+        menu.gameObject.GetComponent<AudioManager>().playPageTurn();
         UpdateDisplay();
     }
 
@@ -237,6 +238,7 @@ public class QuestAssigningTesting : MonoBehaviour
             currentQuest.adventurersAssigned.Add(self);
             Debug.Log("removal?" +  info.adventurersOnStandby.Remove(self));
             currentQuest.CalculateProbability();
+            menu.gameObject.GetComponent<AudioManager>().playScribble();
             UpdateDisplay();
         }
 
@@ -253,6 +255,7 @@ public class QuestAssigningTesting : MonoBehaviour
                 info.adventurersOnStandby.Add(currentQuest.adventurersAssigned[which]);
                 currentQuest.adventurersAssigned.Remove(currentQuest.adventurersAssigned[which]);
                 currentQuest.CalculateProbability();
+                menu.gameObject.GetComponent<AudioManager>().playScribble2();
                 UpdateDisplay();
             }
         }

@@ -165,7 +165,6 @@ public class QuestMenuTester : MonoBehaviour
             fromPool.Remove(fromPool[0]);
         }
 
-        GetComponent<AudioManager>().playPageTurn();
 
         OpenButtonScreen();
     }

@@ -239,7 +239,8 @@ public class MenuManager : MonoBehaviour
             ShowTax(tax);
             info.gold -= tax;
             Debug.Log("tax - " + info.weeks);
-            UpdateGold();
+        } else{
+            CheckNextQuest();
         }
     }
 
@@ -300,6 +301,7 @@ public class MenuManager : MonoBehaviour
     //checks whether quest is successful
     public void EvaluateQuest(QuestScript testing)
     {
+        GetComponent<AudioManager>().playPageTurn();
         Debug.Log("evaluate: " + testing.questName);
         bool passed = false;
 
@@ -388,21 +390,24 @@ public class MenuManager : MonoBehaviour
             }
             
 
-            if(passed){
-                foreach (AdventurerScript adv in testing.adventurersAssigned)
+            
+                //foreach (AdventurerScript adv in testing.adventurersAssigned)
+                while(testing.adventurersAssigned.Count>0)
                 {
+                    AdventurerScript adv = testing.adventurersAssigned[0];
+                    if(passed){
                     //give adventurers exp
                     adv.exp += ex;
                     adv.CheckLevelUp();
+                    }
 
                     //subtract endurance cost
                     adv.currentEndurance -= en;
 
                     //return adventurers to standby
-                     info.adventurersOnStandby.Add(adv);
-                    /testing.adventurersAssigned.Remove(adv);
-                }
-            } 
+                    info.adventurersOnStandby.Add(adv);
+                    testing.adventurersAssigned.Remove(adv);
+                }  
         }
 
             
@@ -428,8 +433,6 @@ public class MenuManager : MonoBehaviour
                 info.sentQuests.Remove(testing);
                 info.completedQuests.Add(testing);
                 info.questsCompleted++;
-
-                info.CheckGuildLevelUp();
                 info.ChainQuestCheck();
         }
             else
@@ -440,8 +443,11 @@ public class MenuManager : MonoBehaviour
 
                 info.reputation -= rep / 2;
 
-                info.questPool.Add(testing);
+                if(!info.questPool.Contains(testing)){
+                    info.questPool.Add(testing);
+                }
                 info.sentQuests.Remove(testing);
+
 
             //see if adventurer is injured
             if (testing.adventurersAssigned.Count > 0)
@@ -488,6 +494,8 @@ public class MenuManager : MonoBehaviour
         }
         else
         {
+            UpdateGold();
+            //CheckRankUp();
             OpenMainScreen();
         }
         /**
@@ -501,6 +509,7 @@ public class MenuManager : MonoBehaviour
     //shows that an adventurer has levelled up
     public void ShowLevelUp(GameObject adventurer)
     {
+        GetComponent<AudioManager>().playPageTurn();
         GetComponent<AudioManager>().playCymbals();
         AdventurerScript adv = adventurer.GetComponent<AdventurerScript>();
         advLevelUpScreen.SetActive(true);
@@ -510,6 +519,7 @@ public class MenuManager : MonoBehaviour
     //shows that the guild has ranked up
     public void ShowRankUp()
     {
+        GetComponent<AudioManager>().playPageTurn();
         GetComponent<AudioManager>().playFanfare();
         guildRankUpScreen.SetActive(true);
         guildRankInfo.text = info.guildName + " has proven their mettle!\nGuild Rank: "+ info.guildRank;
@@ -518,6 +528,7 @@ public class MenuManager : MonoBehaviour
     //shows that the guild has been taxed
     public void ShowTax(int theTax)
     {
+        GetComponent<AudioManager>().playPageTurn();
         guildTaxScreen.SetActive(true);
         guildTaxInfo.text = info.guildName + " has been taxed for each adventurer hired.\nYou have paid " +theTax +" gold in total.";
     }
@@ -539,10 +550,38 @@ public class MenuManager : MonoBehaviour
     //show injured adventurer
     public void ShowInjury()
     {
-        GetComponent<AudioManager>().playGuitar();
+        GetComponent<AudioManager>().playPageTurn();
         injuryScreen.SetActive(true);
         injuryInfo.text = injuryNotification[0].aName + " has been injured!";
+        GetComponent<AudioManager>().playGuitar();
     }
 
+    public void CloseTaxPopup(){
+        GetComponent<AudioManager>().playClick();
+        guildTaxScreen.SetActive(false);
+        CheckNextQuest();
+    }
 
+    public void CloseResultsPopup(){
+        GetComponent<AudioManager>().playClick();
+        if(!info.CheckGuildLevelUp()){
+            CheckNextQuest();
+        }
+    }
+
+    public void CloseRankUpPopup(){
+        GetComponent<AudioManager>().playClick();
+        guildRankUpScreen.SetActive(false);
+        CheckNextQuest();
+    }
+
+    public void CloseAdvLevelPopUp(){
+        GetComponent<AudioManager>().playClick();
+        advLevelUpScreen.SetActive(false);
+    }
+
+    public void CloseInjuryPopUp(){
+        GetComponent<AudioManager>().playClick();
+        NextInjured();
+    }
 }

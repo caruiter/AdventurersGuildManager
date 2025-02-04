@@ -110,7 +110,7 @@ public class infoHolder : MonoBehaviour
     }
 
     //check if guild rank can level up
-    public void CheckGuildLevelUp()
+    public bool CheckGuildLevelUp()
     {
         switch (guildRank)
         {
@@ -124,11 +124,13 @@ public class infoHolder : MonoBehaviour
                         shelf.sprite = Cshelf;
                         SearchForQuests();
                         menu.ShowRankUp();
+                        return true;
                         //else if necessary quest hasn't been unlocked
                     } else if (questPool.Contains(rankUpQuests[0]) == false && activeQuests.Contains(rankUpQuests[0])==false)
                     {
                         questPoolController.fromPool.Add(rankUpQuests[0]);
                         questPool.Add(rankUpQuests[0]);
+                        return false;
                     }
                 } 
                 break;
@@ -142,12 +144,14 @@ public class infoHolder : MonoBehaviour
                         shelf.sprite = Bshelf;
                         SearchForQuests();
                         menu.ShowRankUp();
+                        return true;
                         //else if necessary quest hasn't been unlocked
                     }
                     else if (questPool.Contains(rankUpQuests[1]) == false && activeQuests.Contains(rankUpQuests[1]) == false)
                     {
                         questPoolController.fromPool.Add(rankUpQuests[1]);
                         questPool.Add(rankUpQuests[1]);
+                        return false;
                     }
                 }
                 break;
@@ -161,12 +165,14 @@ public class infoHolder : MonoBehaviour
                         shelf.sprite = Ashelf;
                         SearchForQuests();
                         menu.ShowRankUp();
+                        return true;
                         //else if necessary quest hasn't been unlocked
                     }
                     else if (questPool.Contains(rankUpQuests[2]) == false && activeQuests.Contains(rankUpQuests[2]) == false)
                     {
                         questPoolController.fromPool.Add(rankUpQuests[2]);
                         questPool.Add(rankUpQuests[2]);
+                        return false;
                     }
                 }
                 break;
@@ -180,12 +186,14 @@ public class infoHolder : MonoBehaviour
                         shelf.sprite = Sshelf;
                         SearchForQuests();
                         menu.ShowRankUp();
+                        return true;
                         //else if necessary quest hasn't been unlocked
                     }
                     else if (questPool.Contains(rankUpQuests[3]) == false && activeQuests.Contains(rankUpQuests[3]) == false)
                     {
                         questPoolController.fromPool.Add(rankUpQuests[3]);
                         questPool.Add(rankUpQuests[3]);
+                        return false;
                     }
                 }
                 break;
@@ -201,9 +209,11 @@ public class infoHolder : MonoBehaviour
                         questPoolController.fromPool.Add(rankUpQuests[4]);
                         questPool.Add(rankUpQuests[4]);
                         end.enabled = true;
+                        return false;
                     }
                 break;
         }
+        return false;
     }
 
 }

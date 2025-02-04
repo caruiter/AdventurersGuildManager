@@ -958,23 +958,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5513764803959698540, guid: db086f42ca8a89047af6475fd73faaae, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5513764803959698540, guid: db086f42ca8a89047af6475fd73faaae, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 39133075}
+      objectReference: {fileID: 1260463427}
     - target: {fileID: 5513764803959698540, guid: db086f42ca8a89047af6475fd73faaae, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5513764803959698540, guid: db086f42ca8a89047af6475fd73faaae, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
+      value: CloseRankUpPopup
       objectReference: {fileID: 0}
     - target: {fileID: 5513764803959698540, guid: db086f42ca8a89047af6475fd73faaae, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: MenuManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5513764803959698540, guid: db086f42ca8a89047af6475fd73faaae, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -7075,23 +7075,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3502753261376781931, guid: 6b37a50904a6384468744d057c75ead2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3502753261376781931, guid: 6b37a50904a6384468744d057c75ead2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 342507629}
+      objectReference: {fileID: 1260463427}
     - target: {fileID: 3502753261376781931, guid: 6b37a50904a6384468744d057c75ead2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3502753261376781931, guid: 6b37a50904a6384468744d057c75ead2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
+      value: CloseTaxPopup
       objectReference: {fileID: 0}
     - target: {fileID: 3502753261376781931, guid: 6b37a50904a6384468744d057c75ead2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: MenuManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3502753261376781931, guid: 6b37a50904a6384468744d057c75ead2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -36845,7 +36845,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3502753261376781931, guid: b328c9bd405b02d49b1be8099cec5f39, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: NextInjured
+      value: CloseInjuryPopUp
       objectReference: {fileID: 0}
     - target: {fileID: 3502753261376781931, guid: b328c9bd405b02d49b1be8099cec5f39, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -38320,23 +38320,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1535263502678173097, guid: ade2edc6772b0954d8809dde6264c4ba, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1535263502678173097, guid: ade2edc6772b0954d8809dde6264c4ba, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1598097164}
+      objectReference: {fileID: 1260463427}
     - target: {fileID: 1535263502678173097, guid: ade2edc6772b0954d8809dde6264c4ba, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1535263502678173097, guid: ade2edc6772b0954d8809dde6264c4ba, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
+      value: CloseAdvLevelPopUp
       objectReference: {fileID: 0}
     - target: {fileID: 1535263502678173097, guid: ade2edc6772b0954d8809dde6264c4ba, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: MenuManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1535263502678173097, guid: ade2edc6772b0954d8809dde6264c4ba, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -45569,7 +45569,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1260463427}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: CheckNextQuest
+        m_MethodName: CloseResultsPopup
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

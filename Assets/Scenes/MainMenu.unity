@@ -2128,6 +2128,23 @@ MonoBehaviour:
     https://gdc.sonniss.com/
 
 
+    Misc.
+    from Pixabay
+
+    https://pixabay.com/sound-effects/pen-strokes-and-scribbling-compilation-25322/
+
+    https://pixabay.com/sound-effects/pen-click1-47501/
+
+    https://pixabay.com/sound-effects/writing-on-paper-263222/
+
+    https://pixabay.com/sound-effects/tada-fanfare-a-6313/
+
+    https://pixabay.com/sound-effects/cymbals-roll-28327/
+
+    https://pixabay.com/sound-effects/2-notes-octave-guitar-83275/
+
+    https://pixabay.com/sound-effects/paper-245786/
+
 
     Dialogue
     system:
@@ -2161,8 +2178,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35
-  m_fontSizeBase: 35
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

@@ -330,11 +330,28 @@ public class MenuManager : MonoBehaviour
                }
        }**/
 
-                    //initialize rewards/costs
-        int extraGold = 0;
-        int extraProb = 0;
-        int extraExp = 0;
-        int extraEn = 0;
+
+
+            int cast = Random.Range(0, 101);
+
+                if (cast <= testing.currentProbability)
+                {
+                    passed = true;
+                }
+                else
+                {
+                    passed = false;
+                }
+            
+            resultScreen.SetActive(true);
+
+            testing.sent = false;
+
+        //initialize rewards/costs
+        int gol = testing.gold;
+        int rep = testing.rep;
+        int ex = testing.adventurerExp;
+        int en = testing.enduranceCost;
 
         if (testing.adventurersAssigned.Count >0)
         {
@@ -354,50 +371,9 @@ public class MenuManager : MonoBehaviour
                 poolStr += stat.str;
             }
 
-            int statCast = testing.maxAdventurers * 5;
+            int statCast = Random.Range(0, 21);
 
-            if (statCast <= poolLuck) {
-                extraGold = testing.gold/4;
-                Debug.Log("extra gold: " + extraGold);
-            }
-            if (statCast <= poolDex)
-            {
-                extraEn = 1;
-                Debug.Log("extra En");
-            }
-            if(statCast <= poolArc)
-            {
-                extraExp = testing.adventurerExp/10;
-                Debug.Log("extra exp: " + extraExp);
-            }
-            if (statCast <= poolStr)
-            {
-                extraProb = 5;
-                Debug.Log("extra prob: " + extraProb);
-            }
-
-
-
-            int cast = Random.Range(0, 101);
-
-                if (cast <= (testing.currentProbability + extraProb))
-                {
-                    passed = true;
-                }
-                else
-                {
-                    passed = false;
-                }
-            
-            resultScreen.SetActive(true);
-
-            testing.sent = false;
-
-
-
-            //int statCast = Random.Range(0, 21);
-
-            /**if (statCast >= poolLuck) {
+            if (statCast >= poolLuck) {
                 gol += gol / 2;
             }
             if (statCast >= poolDex)
@@ -411,10 +387,7 @@ public class MenuManager : MonoBehaviour
             if (statCast >= poolStr)
             {
                 rep += rep / 2;
-            }*/
-
-
-            
+            }
             
 
             
@@ -424,12 +397,12 @@ public class MenuManager : MonoBehaviour
                     AdventurerScript adv = testing.adventurersAssigned[0];
                     if(passed){
                     //give adventurers exp
-                    adv.exp += testing.adventurerExp + extraExp;
+                    adv.exp += ex;
                     adv.CheckLevelUp();
                     }
 
                     //subtract endurance cost
-                    adv.currentEndurance -= testing.enduranceCost - extraEn;
+                    adv.currentEndurance -= en;
 
                     //return adventurers to standby
                     info.adventurersOnStandby.Add(adv);
@@ -442,19 +415,18 @@ public class MenuManager : MonoBehaviour
 
             if (passed || info.questsCompleted == 0)
             {
-                int gol = testing.gold + extraGold;
                 if(testing.FinalQuest == true)
                 {
-                    End.ended = true;
-                }
+                 End.ended = true;
+                  }
                 successText.SetActive(true);
                 failureText.SetActive(false);
                 completionText.text = testing.onCompletion;
-                resultsSpecifics.text = "Obtained: "+ gol +" gold and "+ testing.rep + " reputation points";
+                resultsSpecifics.text = "Obtained: "+ gol +" gold and "+ rep + " reputation points";
                 //ReturnQuestToPool();
 
                 info.gold += gol;
-                info.reputation += testing.rep;
+                info.reputation += rep;
                 UpdateGold();
 
                 info.activeQuests.Remove(testing);
@@ -467,9 +439,9 @@ public class MenuManager : MonoBehaviour
             {
                 successText.SetActive(false);
                 failureText.SetActive(true);
-                resultsSpecifics.text = "Lost: "+testing.rep/2+" reputation points";
+                resultsSpecifics.text = "Lost: "+rep/2+" reputation points";
 
-                info.reputation -= testing.rep / 2;
+                info.reputation -= rep / 2;
 
                 if(!info.questPool.Contains(testing)){
                     info.questPool.Add(testing);

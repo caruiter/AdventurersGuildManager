@@ -16,7 +16,7 @@ public class QuestAssigningTesting : MonoBehaviour
     public TextMeshProUGUI questObjDisplay;
     public TextMeshProUGUI questReqsDisplay;
     public TextMeshProUGUI questRewardsDisplay;
-    public TextMeshProUGUI bonusesDisplay;
+
 
     public List<GameObject> AdventurerRosterButtons;
     public List<GameObject> AssignedAdvButtons;
@@ -126,57 +126,9 @@ public class QuestAssigningTesting : MonoBehaviour
         }
         
 
-        //update bonuses applied
-        string bonusString = "";
-        int str = 0;
-        int dex = 0;
-        int luck = 0;
-        int arc = 0;
+                
+            
 
-        foreach(AdventurerScript AvSct in currentQuest.adventurersAssigned){
-            str += AvSct.str;
-            dex += AvSct.dex;
-            luck += AvSct.luck;
-            arc += AvSct.arcane;
-        }
-        
-        int gateNum = currentQuest.maxAdventurers * 5;
-        if(str >= gateNum){
-            if(bonusString == ""){
-                bonusString = "Bonuses: +5% probability (>"+gateNum+" str)";
-            } else{
-                bonusString += ", +5% probability (>"+gateNum+" str)";
-            }
-        }
-        if(dex >= gateNum){
-            if(bonusString == ""){
-                bonusString = "Bonuses: -1 endurance cost (>"+gateNum+" dex)";
-            } else{
-                bonusString += ", -1 endurance cost (>"+gateNum+" dex)";
-            }
-        }
-        
-        if(luck >= gateNum){
-            if(bonusString == ""){
-                bonusString = "Bonuses: +25% gold (>"+gateNum+" luck)";
-            } else{
-                bonusString += ", +25% gold (>"+gateNum+" luck)";
-            }
-        }
-
-        if(arc >= gateNum){
-            if(bonusString == ""){
-                bonusString = "Bonuses: +10% exp (>"+gateNum+" arcane)";
-            } else{
-                bonusString += ", +10% exp (>"+gateNum+" arcane)";
-            }
-        }
-
-        if(bonusString == ""){
-            bonusesDisplay.text = "No bonuses active";
-        } else{
-            bonusesDisplay.text = bonusString;
-        }
        
         //update adventurers assigned
         for (int g = 0; g < AssignedAdvButtons.Count; g++)

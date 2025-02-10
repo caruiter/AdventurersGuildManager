@@ -53108,17 +53108,16 @@ RectTransform:
   m_Father: {fileID: 1197962591}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 174.6232, y: -32.09476}
   m_SizeDelta: {x: 1574.1189, y: 1015}
-=======
+
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 180.04004, y: -30.88794}
   m_SizeDelta: {x: -360.08, y: -61.777}
->>>>>>> parent of f812446 (got stat evals working)
+
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3097998405225670757
 MonoBehaviour:
